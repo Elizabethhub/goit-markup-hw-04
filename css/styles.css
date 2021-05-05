@@ -94,6 +94,9 @@ html {
 
 .contacts-section-link,
 .contacts-section-link-tel {
+  display: flex;
+  align-items: center;
+
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.71;
@@ -255,7 +258,9 @@ html {
   line-height: 1.14;
   color: var(--title-text-color);
 }
-
+.features-title.light-text {
+  color: var(--footer-text-color);
+}
 .team {
   background: #f5f4fa;
 }
@@ -276,11 +281,17 @@ html {
   flex-basis: calc((100% - 120px) / 4);
   margin-top: 30px;
   margin-left: 30px;
+
+  background: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list-content {
   padding-top: 30px;
   padding-left: 32px;
   padding-right: 32px;
+  padding-bottom: 30px;
 }
 .name-title {
   font-weight: 500;
@@ -295,7 +306,7 @@ html {
   text-align: center;
   margin-bottom: 16px;
 }
-
+/* ================ FOOTER =============== */
 .adress {
   font-size: 14px;
   line-height: 1.71;
@@ -308,21 +319,33 @@ html {
   margin-bottom: 20px;
 }
 .section-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .contact-section-footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
+.advantages {
+  margin-left: 70px;
+}
 /* ================ SVG =============== */
 .social-list-icon {
+  fill: #afb1b8;
   width: 20px;
   height: 20px;
 }
+.social-list-icon.dark-mode {
+  fill: white;
+}
+
 .social-list {
   display: flex;
   justify-content: space-between;
 }
+
 .social-list-item-link {
   display: flex;
   justify-content: center;
@@ -332,9 +355,72 @@ html {
   border-radius: 50%;
   background-color: #ffffff;
 }
-.social-list-item-link:hover .social-list-icon {
+.social-list-item-link.dark {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-item-link:hover .social-list-icon,
+.social-list-item-link:focus .social-list-icon {
   fill: #ffffff;
 }
-.social-list-item-link:hover {
+.social-list-item-link:hover,
+.social-list-item-link:focus {
   background-color: var(--accent-text-color);
+}
+.mail-icon {
+  fill: var(--primary-text-color);
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.contacts-section-link:hover .mail-icon,
+.contacts-section-link:focus .mail-icon {
+  fill: var(--accent-text-color);
+}
+.tel-icon {
+  fill: var(--primary-text-color);
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+.contacts-section-link-tel:hover .tel-icon,
+.contacts-section-link-tel:focus .tel-icon {
+  fill: var(--accent-text-color);
+}
+.feature-icon-frame {
+  padding: 25px 102px;
+  margin-bottom: 30px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+.features-icon {
+  width: 65px;
+  height: 70px;
+}
+/* ================ CLIENTS =============== */
+.client-icon {
+  fill: #afb1b8;
+  width: 106px;
+  height: 60px;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-text-color);
+}
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-text-color);
 }
